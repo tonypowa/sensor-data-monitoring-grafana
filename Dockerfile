@@ -7,7 +7,7 @@ WORKDIR /usr/src/app
 # Install required system dependencies, including gcc and other build tools
 RUN apt-get update && apt-get install -y \
     gcc \
-    python3 \
+    python \
     libffi-dev \
     && rm -rf /var/lib/apt/lists/*
 

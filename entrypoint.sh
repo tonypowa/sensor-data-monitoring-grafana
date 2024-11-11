@@ -2,8 +2,8 @@
 
 # Run the test script
 echo "Starting test script..."
-python3 test.py &
+python test.py &
 
 # Run the main application
 echo "Starting main application..."
-python3 app.py
+python app.py
