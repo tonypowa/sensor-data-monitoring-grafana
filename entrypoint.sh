@@ -2,8 +2,8 @@
 
 # Run the test script
 echo "Starting test script..."
-sudo python3 test.py &
+python3 test.py &
 
 # Run the main application
 echo "Starting main application..."
-sudo python3 app.py
+python3 app.py
