@@ -47,7 +47,11 @@ Below are the simplified steps that you need to take:
     [Install]
     WantedBy=multi-user.target
     ```
-    Change is the **ExecStart** flag. The Python path, and the path to the script that needs to be executed.
+    The important piece that we need to change is the `ExecStart` flag, which takes in the command that you want to run. The first argument is the Python path (in this example it's `python3`) and the second argument is the path to the script that needs to be executed:
+
+   ```
+   ExecStart=/usr/bin/python3 /path-to-python-file-/app.py
+   ```
 
     Reload the systemd manager.
 
