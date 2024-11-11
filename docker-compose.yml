@@ -33,6 +33,13 @@ services:
     networks:
       - monitoring
     restart: always
+    volumes:
+      - ./provisioning/:/etc/grafana/provisioning/datasources
+    environment:
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin # grants admin role to anonymous access
+      - GF_AUTH_ANONYMOUS_ENABLED=true # removes login 1/2
+      - GF_AUTH_BASIC_ENABLED=false # removes login 2/2
+      
     depends_on:
       - prometheus
 
