@@ -28,5 +28,5 @@ ENV FLASK_APP=app.py
 # RUN chmod +x entrypoint.sh
 
 # Run app.py when the container launches
-# CMD ["python", "./app.py"]
-CMD ["./entrypoint.sh"]
+CMD ["python", "./app.py"]
+

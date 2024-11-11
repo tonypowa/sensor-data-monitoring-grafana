@@ -10,6 +10,9 @@ services:
     depends_on:
       - prometheus
     restart: always
+    devices:
+      - "/dev/gpiomem:/dev/gpiomem"
+    privileged: true
 
   prometheus:
     image: prom/prometheus:latest
