@@ -7,7 +7,7 @@ WORKDIR /usr/src/app
 # Install required system dependencies, including gcc and other build tools
 RUN apt-get update && apt-get install -y \
     gcc \
-    python3-dev \
+    python3 \
     libffi-dev \
     && rm -rf /var/lib/apt/lists/*
 
@@ -23,6 +23,9 @@ EXPOSE 5000
 
 # Define environment variable
 ENV FLASK_APP=app.py
+
+# Make sure entrypoint.sh is executable
+RUN chmod +x entrypoint.sh
 
 # Run app.py when the container launches
 # CMD ["python", "./app.py"]
