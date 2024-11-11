@@ -25,7 +25,7 @@ EXPOSE 5000
 ENV FLASK_APP=app.py
 
 # Make sure entrypoint.sh is executable
-RUN chmod +x entrypoint.sh
+# RUN chmod +x entrypoint.sh
 
 # Run app.py when the container launches
 # CMD ["python", "./app.py"]
