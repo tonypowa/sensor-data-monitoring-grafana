@@ -39,7 +39,7 @@ services:
       - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin # grants admin role to anonymous access
       - GF_AUTH_ANONYMOUS_ENABLED=true # removes login 1/2
       - GF_AUTH_BASIC_ENABLED=false # removes login 2/2
-      
+      - GF_FEATURE_TOGGLES_ENABLE=alertingSimplifiedRouting,alertingQueryAndExpressionsStepMode #enables new alert creation flow
     depends_on:
       - prometheus
 
