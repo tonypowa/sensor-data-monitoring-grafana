@@ -1,26 +1,4 @@
 {
-  "__inputs": [],
-  "__elements": {},
-  "__requires": [
-    {
-      "type": "panel",
-      "id": "gauge",
-      "name": "Gauge",
-      "version": ""
-    },
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "9.5.15"
-    },
-    {
-      "type": "panel",
-      "id": "timeseries",
-      "name": "Time series",
-      "version": ""
-    }
-  ],
   "annotations": {
     "list": [
       {
@@ -37,7 +15,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": null,
+  "id": 1,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -1409,7 +1387,7 @@
           "refId": "A"
         }
       ],
-      "title": "Humidity",
+      "title": "humidity",
       "type": "timeseries"
     },
     {
@@ -1831,7 +1809,7 @@
           "refId": "A"
         }
       ],
-      "title": "Temperature",
+      "title": "temperature",
       "type": "timeseries"
     }
   ],
