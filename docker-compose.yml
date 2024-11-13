@@ -47,3 +47,6 @@ services:
 
 networks:
   monitoring:
+
+volumes:
+  grafana-db
