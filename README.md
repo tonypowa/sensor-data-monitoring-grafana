@@ -72,4 +72,24 @@ docker compose verison
 
 ## Set up the Grafana stack
 
+- Clone the tutorial environment repository.
+```
+git clone https://github.com/tonypowa/sensor-data-monitoring-grafana
+```
+
+- Change to the directory where you cloned the repository:
+```
+cd tutorial-environment
+```
+
+- Run the Grafana stack:
+```
+docker compose --build
+```
+
+The first time you run `docker compose up –build`, Docker will rebuild the images and then bring up the containers. This might take a few minutes, depending on your internet connection.
+
+>Note
+If you already have Grafana, or Prometheus running on your system, you might see errors, because the Docker image is trying to use ports that your local installations are already using. If this is the case, stop the services, then run the command again.
+
 
