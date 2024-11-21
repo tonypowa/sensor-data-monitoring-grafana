@@ -81,7 +81,7 @@ git clone https://github.com/tonypowa/sensor-data-monitoring-grafana
 
 Change to the directory where you cloned the repository:
 ```
-cd tutorial-environment
+cd sensor-data-monitoring-grafana
 ```
 
 Run the Grafana stack:
