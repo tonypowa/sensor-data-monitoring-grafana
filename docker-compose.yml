@@ -28,13 +28,16 @@ services:
 
   grafana:
     image: grafana/grafana:latest
+    user: "0:0"
     ports:
       - "3000:3000"
     networks:
       - monitoring
     restart: always
     volumes:
-      - ./provisioning/:/etc/grafana/provisioning/datasources
+      - ./provisioning/:/etc/grafana/provisioning/datasources # provisions prometheus as data source
+      - ./provisioning/dashboards:/etc/grafana/provisioning/dashboards #provisions a demo dashboard
+      - ./grafana-db/:/var/lib/grafana # persist Grafana database
     environment:
       - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin # grants admin role to anonymous access
       - GF_AUTH_ANONYMOUS_ENABLED=true # removes login 1/2
@@ -45,3 +48,6 @@ services:
 
 networks:
   monitoring:
+
+volumes:
+  grafana-db:
