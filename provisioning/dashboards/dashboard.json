@@ -428,9 +428,9 @@
             "Prometheus"
           ]
         },
-        "multi": false,
+        "multi": true,
         "name": "DATASOURCE",
-        "options": ["Prometheus"],
+        "options": [],
         "query": "grafana",
         "refresh": 1,
         "regex": "",
@@ -439,7 +439,7 @@
     ]
   },
   "time": {
-    "from": "now-1",
+    "from": "now-1h",
     "to": "now"
   },
   "timepicker": {},
