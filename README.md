@@ -1,5 +1,7 @@
 # Monitor sensor data with Raspberry Pi and Grafana
 
+![image](https://github.com/user-attachments/assets/81caee2b-63ae-47db-bdf5-9f90bc7c10e0)
+
 In this project, we leverage a Python script to simulate sensor data. The data is exposed via an HTTP endpoint, which is then scraped by Prometheus. Prometheus collects these metrics and stores them in its time-series database, where they can be queried. Grafana is used to visualize this data, offering real-time dashboards to track sensor metrics like temperature, and humidity.
 
 For the full step-by-step instructions including hardware and software requirements, Raspberry Pi sensor wiring, code explanation, and overview of the tech stack needed (Python, Prometheus, Docker), see this [blog post](https://grafana.com/blog/2023/10/23/monitor-temperature-and-humidity-with-grafana-and-raspberry-pi/). 
@@ -72,17 +74,17 @@ docker compose verison
 
 ## Set up the Grafana stack
 
-- Clone the tutorial environment repository.
+Clone the tutorial environment repository.
 ```
 git clone https://github.com/tonypowa/sensor-data-monitoring-grafana
 ```
 
-- Change to the directory where you cloned the repository:
+Change to the directory where you cloned the repository:
 ```
 cd tutorial-environment
 ```
 
-- Run the Grafana stack:
+Run the Grafana stack:
 ```
 docker compose --build
 ```
@@ -91,5 +93,23 @@ The first time you run `docker compose up –build`, Docker will rebuild the ima
 
 >Note
 If you already have Grafana, or Prometheus running on your system, you might see errors, because the Docker image is trying to use ports that your local installations are already using. If this is the case, stop the services, then run the command again.
+
+## Monitor your temperature and humidity data from Grafana
+
+- From your machine, access your Raspberry Pi by entering the IP address into the browser: `http://{you-raspberry-pi-IP-address}:3000`.
+- You should be automatically logged in to Grafana
+- Open the side menu.
+- Click Explore.
+- Select `Prometheus` from the dropdown menu at the top left corner.
+- Click Metrics browser and select `current_temperature`. Select the metrics
+- Click the **run query** button at the top right corner.
+ You should see temperature data graphed.
+- Repeat the above steps to explore `current_humidty`.
+
+You made it! 
+
+## Next steps
+Check the sample Dashboard provided in this tutorial for reference, and adjust it to your needs. Find it in **Home > Dashboards**.
+
 
 
