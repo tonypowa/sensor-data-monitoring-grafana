@@ -8,15 +8,15 @@ For the full step-by-step instructions including hardware and software requireme
 
 Here is an overview of the steps that you need to take: 
 
-- Step 1 - Install the requirements:
+- Install the requirements:
   - Git
   - Docker
   - Docker compose
 
-- Step 2 - Set up the Grafana stack
-- Step 3 - Monitor your data from Grafana
+- Set up the Grafana stack
+- Monitor your data from Grafana
 
-## Step 1 - Install the requirements
+## Install the requirements
 
 ### [Git](https://git-scm.com/)
 
