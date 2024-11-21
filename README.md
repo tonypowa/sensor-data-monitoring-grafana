@@ -117,6 +117,7 @@ You made it!
 
 ## Next steps
 Check the sample Dashboard provided in this tutorial for reference, and adjust it to your needs. Find it in **Home > Dashboards**.
-Note: you will need to enter Prometheus in the variable field and click refresh, so the panel refreshes the data source and the data is displayed.
+
+Note: you will need to enter `Prometheus` in the variable field and click refresh, so the panel refreshes the data source and the data is displayed.
 
 
