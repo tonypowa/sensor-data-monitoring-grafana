@@ -459,8 +459,8 @@
   },
   "timepicker": {},
   "timezone": "browser",
-  "title": "Temperature and Humidity Monitor test",
+  "title": "Temperature and Humidity Monitor",
   "uid": "",
-  "version": 2,
+  "version": 1,
   "weekStart": ""
 }
