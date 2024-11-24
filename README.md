@@ -118,5 +118,3 @@ You made it!
 ## Next steps
 
 For inspiration or reference, import a sample dashboard built for this tutorial by entering its ID. In Grafana, go to **Home > Dashboards > Import**, enter the ID `22406`, and click **Load**. Feel free to adjust it to fit your needs.
-
-Note: you will need to enter `Prometheus` in the variable field and click refresh, so the panel refreshes the data source and the data is displayed.
