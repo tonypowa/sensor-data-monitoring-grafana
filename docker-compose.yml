@@ -36,7 +36,6 @@ services:
     restart: always
     volumes:
       - ./provisioning/:/etc/grafana/provisioning/datasources # provisions prometheus as data source
-      # - ./provisioning/dashboards:/etc/grafana/provisioning/dashboards
       - ./grafana-db/:/var/lib/grafana # persist Grafana database
     environment:
       - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin # grants admin role to anonymous access
